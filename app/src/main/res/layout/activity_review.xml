@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="166dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="76dp"
+        android:layout_weight="1"
+        android:contentDescription="TODO"
+        android:src="@drawable/fdfdfdfd"
+        app:layout_constraintBottom_toTopOf="@+id/summary"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Computer organisation"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/book_image"
+        app:layout_constraintTop_toBottomOf="@+id/rating_bar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Andrew Tannenbaum"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/book_image"
+        app:layout_constraintTop_toBottomOf="@+id/book_name"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/todo"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="sans-serif"
+        android:text="This best-selling modern introduction to computer hardware and architecture provides a structured approach to computer architecutre,..."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_review_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_image"
+        app:layout_constraintVertical_bias="0.142" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/rating_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/user_review_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:text="John: This is a great book. I really enjoyed it."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="517dp" />
+
+    <TextView
+        android:id="@+id/user_review_2"
+        android:layout_width="386dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:text="Sarah: I found this book to be a bit slow at first, but it really picked up towards the end."
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary" />
+
+    <ImageButton
+        android:id="@+id/people_button"
+        android:layout_width="95dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="21dp"
+        android:contentDescription="@string/people_button_description"
+        android:onClick="openReading"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_people"
+        app:layout_constraintBottom_toTopOf="@+id/user_review_1"
+        app:layout_constraintEnd_toStartOf="@+id/book_button"
+        app:layout_constraintTop_toBottomOf="@+id/summary"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <ImageButton
+        android:id="@+id/audio_button"
+        android:layout_width="97dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/audio_button_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_audio"
+        app:layout_constraintBottom_toTopOf="@+id/user_review_1"
+        app:layout_constraintEnd_toStartOf="@+id/people_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/summary"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/book_button"
+        android:layout_width="104dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="21dp"
+        android:contentDescription="@string/book_button_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_book"
+        app:layout_constraintBottom_toTopOf="@+id/user_review_1"
+        app:layout_constraintStart_toEndOf="@+id/people_button"
+        app:layout_constraintTop_toBottomOf="@+id/summary"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
